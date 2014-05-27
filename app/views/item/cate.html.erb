@@ -1,0 +1,25 @@
+<div class="main">
+  
+  <section class="nav">
+    <button class="btn btn-upload" id="btn-upload">上传</button>
+  </section>
+
+  <% @items.each do |item| %>
+  <section class="item">
+    <div class="item-main">
+      <span class="item-column"><%= item.name %></span>
+      <span class="item-column item-column-download">
+        <%= link_to '下载', item.url , target: :_blank, class: :'btn btn-download' %>
+      </span>
+    </div>
+    <div class="item-sub">
+      <p>上传时间：<%= item.created_at.localtime.to_formatted_s(:db) %></p>
+      <p>资源分类：<%= item.cate %></p>
+      <p>资源类型：<%= item.type %></p>
+      <p>资源大小：<%= item.size %></p>
+      <p>资源描述：<%= item.info %></p>
+    </div>
+  </section>
+  <% end %>
+
+</div>
