@@ -139,6 +139,7 @@ DEPENDENCIES
   mongoid (~> 4.0.0.beta1)
   qiniu (~> 6.2.1)
   rails (= 4.1.0)
+  rake (= 10.3.2)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
