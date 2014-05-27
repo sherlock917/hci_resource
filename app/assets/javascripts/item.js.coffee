@@ -20,6 +20,7 @@ $(document).on 'ready', () ->
     token = $('meta[name="qiniu-token"]').attr 'content'
     fd = new FormData()
     fd.append 'file', file
+    fd.append 'key', file.name
     fd.append 'token', token
     $('#file-submit').attr('disabled', true).text '开始上传...'
     window.onbeforeunload = () ->
