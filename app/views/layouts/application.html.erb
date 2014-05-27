@@ -14,7 +14,24 @@
     <%= image_tag("logo.jpg") %>
   </header>
 
-  <%= yield %>
+  <div class="main">
+  
+    <section class="nav">
+      <button class="btn btn-upload" id="btn-upload">上传</button>
+      <a href="/" class="nav-item">全部</a>
+      <a href="/item/cate/前端" class="nav-item">前端</a>
+      <a href="/item/cate/后台" class="nav-item">后台</a>
+      <a href="/item/cate/安卓" class="nav-item">安卓</a>
+      <a href="/item/cate/iOS" class="nav-item">iOS</a>
+      <a href="/item/cate/系统" class="nav-item">系统</a>
+      <a href="/item/cate/产品" class="nav-item">产品</a>
+      <a href="/item/cate/设计" class="nav-item">设计</a>
+      <a href="/item/cate/其他" class="nav-item">其他</a>
+    </section>
+
+    <%= yield %>
+
+  </div>
 
   <div class="input-window">
     <div class="input-form">

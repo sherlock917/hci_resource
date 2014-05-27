@@ -15,6 +15,10 @@
   color: #000;
 }
 
+.clear {
+  clear: both;
+}
+
 .btn {
   padding: 0.5em 1em;
   background: #28f;
@@ -51,10 +55,26 @@
 .nav {
   width: 100%;
   padding: 1em;
+  text-align: right;
   box-shadow: 0.2em 0.2em 0.7em #aaa;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-left: 1em;
+  line-height: 2em;
+  color: #999;
+  transition: color 0.3s;
+}
+.nav-item:hover {
+  color: #39f;
+}
+
+.btn-upload {
+  float: left;
 }
 
 .item {
