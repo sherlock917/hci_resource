@@ -41,6 +41,3 @@ gem 'mongoid', '~> 4.0.0.beta1'
 
 # Use qiniu
 gem 'qiniu', '~> 6.2.1'
-
-# Use rake
-gem 'rake', '10.3.2'
