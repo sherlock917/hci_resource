@@ -14,11 +14,11 @@ class ItemController < ApplicationController
     @item.update_attributes(params.permit(:download_count))
   end
 
-  # def destroy
-  #   @item = Item.find(params[:id])
-  #   code, result, response_headers = Qiniu::Storage.delete('scauhci', @item.qiniu_key)
-  #   @item.destroy
-  # end
+  def destroy
+    @item = Item.find(params[:id])
+    code, result, response_headers = Qiniu::Storage.delete('scauhci', @item.qiniu_key)
+    @item.destroy
+  end
 
   def cate
     @items = Item.all.where(cate: params[:cate]).desc(:created_at)
