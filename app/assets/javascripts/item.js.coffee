@@ -10,11 +10,23 @@ $(document).on 'ready', () ->
       file = $('#file-input')[0].files[0]
       upload file
 
-  $('#btn-upload').on 'click', () ->
-    $('.input-window').show().animate({opacity:1}, 300)
-
   $('.btn-download').on 'click', (e) ->
     updateItem(e)
+
+  $('#btn-upload').on 'click', () ->
+    showUpload()
+
+  $('#input-exit').on 'click', () ->
+    hideUpload()
+
+
+  showUpload = () ->
+    $('.input-window').show().animate({opacity:1}, 300)
+
+  hideUpload = () ->
+    $('.input-window').animate({opacity:0}, 300, () ->
+      $('.input-window').hide()
+    )
 
   upload = (file) ->
     token = $('meta[name="qiniu-token"]').attr 'content'
