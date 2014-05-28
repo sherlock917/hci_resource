@@ -22,6 +22,7 @@ class ItemController < ApplicationController
 
   def cate
     @items = Item.all.where(cate: params[:cate]).desc(:created_at)
+    render "index"
   end
 
 end

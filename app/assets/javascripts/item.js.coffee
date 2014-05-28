@@ -13,7 +13,7 @@ $(document).on 'ready', () ->
   $('.btn-download').on 'click', (e) ->
     updateItem(e)
 
-  $('#btn-upload').on 'click', () ->
+  $('.btn-upload').on 'click', () ->
     showUpload()
 
   $('#input-exit').on 'click', () ->
@@ -21,12 +21,16 @@ $(document).on 'ready', () ->
 
 
   showUpload = () ->
-    $('.input-window').show().animate({opacity:1}, 300)
+    if $('#file-submit').attr('disabled') == 'disabled'
+      $('.input-window').removeClass('input-window-min')
+    else
+      $('.input-window').addClass('input-window-show')
 
   hideUpload = () ->
-    $('.input-window').animate({opacity:0}, 300, () ->
-      $('.input-window').hide()
-    )
+    if $('#file-submit').attr('disabled') == 'disabled'
+      $('.input-window').addClass('input-window-min')
+    else
+      $('.input-window').removeClass('input-window-show')
 
   upload = (file) ->
     token = $('meta[name="qiniu-token"]').attr 'content'

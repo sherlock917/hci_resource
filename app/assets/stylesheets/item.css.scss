@@ -120,9 +120,18 @@
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   background: rgba(0,0,0,0.7);
-  display: none;
   opacity: 0;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.input-window-show {
+  opacity: 1;
+  z-index: 100;
 }
 
 .input-exit {
@@ -156,6 +165,8 @@
   background: #fff;
   line-height: 2em;
   font-size: 1em;
+  overflow: hidden;
+  transition: width 0.3s,height 0.3s, padding 0.3s;
   input,textarea,select,option {
     font-size: 1em;
   }
@@ -175,9 +186,37 @@
   p {
     margin-bottom: 1em;
   }
+  p:nth-child(1),
+  p:nth-child(2),
+  p:nth-child(3) {
+    overflow: hidden;
+  }
 }
 
 .file-submit {
   display: block;
   margin: 0 auto;
+}
+
+.input-window-min {
+  width: 30%;
+  height: 2em;
+  top: 100%;
+  right: 0;
+  margin: -2em auto 0 auto;
+  .input-form {
+    width: 100%;
+    height: 2em;
+    padding: 0;
+  }
+  .input-form p:nth-child(1),
+  .input-form p:nth-child(2),
+  .input-form p:nth-child(3) {
+    height: 0;
+    margin: 0;
+  }
+  .file-submit {
+    width: 100%;
+    border-radius: 0;
+  }
 }
