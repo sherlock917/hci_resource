@@ -12,6 +12,8 @@
   list-style: none;
   text-decoration: none;
   font-family: sans-serif;
+  -ms-word-break: break-all;
+  word-break: break-all;
   color: #000;
 }
 
@@ -50,6 +52,16 @@
   width: 90%;
   max-width: 1000px;
   margin: 2em auto;
+}
+
+.footer {
+  width: 100%;
+  padding: 1.5em 0;
+  margin: 1.5em auto 0 auto;
+  text-align: center;
+  font-size: 1em;
+  color: #aaa;
+  box-shadow: 0.2em 0.2em 0.7em #aaa;
 }
 
 .nav {
