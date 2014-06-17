@@ -1,6 +1,7 @@
 class Item
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Search
 
   field :name, type: String  # name of the file uploaded
   field :type, type: String  # type of the file, eg. pdf,doc
@@ -10,5 +11,7 @@ class Item
   field :url, type: String   # the qiniu url for the file
   field :qiniu_key, type: String  # the key of the file that qiniu returns
   field :download_count, type: Integer, default: 0
+
+  search_in :name
 
 end

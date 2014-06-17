@@ -38,3 +38,6 @@ gem 'mongoid', '~> 4.0.0.beta1'
 
 # Use qiniu
 gem 'qiniu', '~> 6.2.1'
+
+# Use mongoid_search
+gem 'mongoid_search'

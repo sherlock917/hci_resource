@@ -26,7 +26,7 @@ class ItemController < ApplicationController
   end
 
   def search
-    @items = Item.find()
+    @items = Item.full_text_search(params[:substring])
     render "index"
   end
 
