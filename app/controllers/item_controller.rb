@@ -25,4 +25,9 @@ class ItemController < ApplicationController
     render "index"
   end
 
+  def search
+    @items = Item.find()
+    render "index"
+  end
+
 end
