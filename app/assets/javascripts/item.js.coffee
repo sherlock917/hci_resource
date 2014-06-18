@@ -104,4 +104,5 @@ $(document).on 'ready', () ->
         .text data.download_count 
 
   showSearch = () ->
+    
     false

@@ -89,13 +89,6 @@
   cursor: pointer;
 }
 
-#search-input {
-  width: 10em;
-  height: 1em;
-  padding: 0.5em;
-  border: 0.1em solid #aaa;
-}
-
 .btn-upload {
   float: left;
 }
@@ -242,4 +235,8 @@
     width: 100%;
     border-radius: 0;
   }
+}
+
+.search-window {
+  
 }
