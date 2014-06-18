@@ -19,6 +19,8 @@ $(document).on 'ready', () ->
   $('#input-exit').on 'click', () ->
     hideUpload()
 
+  $('#nav-search').on 'click', () ->
+    showSearch()
 
   showUpload = () ->
     if $('#file-submit').attr('disabled') == 'disabled'
@@ -100,3 +102,6 @@ $(document).on 'ready', () ->
         .parent()
         .find('.item-download-count')
         .text data.download_count 
+
+  showSearch = () ->
+    false
