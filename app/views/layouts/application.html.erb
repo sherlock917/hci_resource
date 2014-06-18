@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>HCI 网盘</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag 'application', media: 'all'%>
@@ -17,7 +18,7 @@
 
   <div class="main">
   
-    <section class="nav">
+    <nav class="nav">
       <button class="btn btn-upload" id="btn-upload">上传</button>
       <a href="/" class="nav-item">全部</a>
       <a href="/item/cate/前端" class="nav-item">前端</a>
@@ -29,7 +30,7 @@
       <a href="/item/cate/设计" class="nav-item">设计</a>
       <a href="/item/cate/其他" class="nav-item">其他</a>
       <a href="" class="nav-item" id="nav-search">搜索</a>
-    </section>
+    </nav>
 
     <%= yield %>
 
