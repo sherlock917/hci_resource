@@ -237,10 +237,38 @@
   }
 }
 
-.search-window {
-  width: 100%;
-  height: 100%;
+.search-box {
+  width: 60%;
+  height: 2em;
+  padding: 1em;
+  max-width: 30em;
   position: fixed;
+  bottom: -100px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0.2em 0.2em 0.7em #aaa;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.search-box-show {
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
+  opacity: 1;
+}
+
+#search-input {
+  width: 60%;
+  height: 2em;
+  font-size: 1em;
+  line-height: 2em;
+  color: #555;
+}
+
+#search-submit,
+#search-cancel {
+  float: right;
+  margin-left: 0.5em;
 }

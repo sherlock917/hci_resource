@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :item
 
   get '/item/cate/:cate' => 'item#cate'
-  get '/item/search/:substring' => 'item#search'
+  get '/item/search/:keywords' => 'item#search'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

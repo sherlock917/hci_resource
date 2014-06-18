@@ -22,6 +22,12 @@ $(document).on 'ready', () ->
   $('#nav-search').on 'click', () ->
     showSearch()
 
+  $('#search-submit').on 'click', () ->
+    startSearch()
+
+  $('#search-cancel').on 'click', () ->
+    hideSearch()
+
   showUpload = () ->
     if $('#file-submit').attr('disabled') == 'disabled'
       $('.input-window').removeClass('input-window-min')
@@ -104,5 +110,18 @@ $(document).on 'ready', () ->
         .text data.download_count 
 
   showSearch = () ->
-    
+    if $('.search-box').hasClass('search-box-show')
+      $('.search-box').removeClass('search-box-show')
+    else
+      $('.search-box').addClass('search-box-show')
+      $('#search-input').focus()
+    false
+
+  hideSearch = () ->
+    $('.search-box').removeClass('search-box-show')
+    false
+
+  startSearch = () ->
+    if $('#search-input').val() != ''
+      location.href = '/item/search/' + $('#search-input').val()
     false
