@@ -8,7 +8,13 @@ $(document).on 'ready', () ->
   $('#file-submit').on 'click', () ->
     if $('#file-input')[0].files.length > 0
       file = $('#file-input')[0].files[0]
-      upload file
+      if uploadable(file)
+        upload file
+      else
+        if file.size > 104857600
+          alert '不支持上传大于100M的文件！'
+        else
+          alert '仅支持上传rar、zip、pdf、doc、xls、ppt以及图片！'
 
   $('.btn-download').on 'click', (e) ->
     updateItem(e)
@@ -27,6 +33,20 @@ $(document).on 'ready', () ->
 
   $('#search-cancel').on 'click', () ->
     hideSearch()
+
+  uploadable = (file) ->
+    type = file.type
+    size = file.size
+    (size < 104857600) &&
+    (type == 'application/x-rar' || 
+    type == 'application/zip' ||
+    type == 'application/pdf' ||
+    type == 'application/msword' ||
+    type == 'application/vnd.ms-excel' ||
+    type == 'application/vnd.ms-powerpoint' ||
+    type == 'image/jpeg' ||
+    type == 'image/png' || 
+    type == 'image/gif')
 
   showUpload = () ->
     if $('#file-submit').attr('disabled') == 'disabled'
