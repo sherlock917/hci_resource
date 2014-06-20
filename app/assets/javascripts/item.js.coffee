@@ -35,18 +35,19 @@ $(document).on 'ready', () ->
     hideSearch()
 
   uploadable = (file) ->
-    type = file.type
-    size = file.size
-    (size < 104857600) &&
-    (type == 'application/x-rar' || 
-    type == 'application/zip' ||
-    type == 'application/pdf' ||
-    type == 'application/msword' ||
-    type == 'application/vnd.ms-excel' ||
-    type == 'application/vnd.ms-powerpoint' ||
-    type == 'image/jpeg' ||
-    type == 'image/png' || 
-    type == 'image/gif')
+    # type = file.type
+    # size = file.size
+    # (size < 104857600) &&
+    # (type == 'application/x-rar' || 
+    # type == 'application/zip' ||
+    # type == 'application/pdf' ||
+    # type == 'application/msword' ||
+    # type == 'application/vnd.ms-excel' ||
+    # type == 'application/vnd.ms-powerpoint' ||
+    # type == 'image/jpeg' ||
+    # type == 'image/png' || 
+    # type == 'image/gif')
+    true
 
   showUpload = () ->
     if $('#file-submit').attr('disabled') == 'disabled'
