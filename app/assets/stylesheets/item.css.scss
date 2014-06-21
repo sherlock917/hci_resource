@@ -119,6 +119,17 @@
   }
 }
 
+.link-icon {
+  width: 0.8em;
+  margin-left: 1em;
+  vertical-align: top;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.item:hover .link-icon {
+  opacity: 1;
+}
+
 .item-sub {
   margin-top: 1.2em;
   border-top: 1px solid #ccc;
