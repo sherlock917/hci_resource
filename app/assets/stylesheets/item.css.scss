@@ -110,11 +110,13 @@
   span {
     color: #555;
   }
-  .item-column {
-    width: calc(50% - 1em);
+  .item-name {
+    width: calc(70% - 1em);
     display: inline-block;
   }
-  .item-column-download {
+  .item-download {
+    width: calc(30% - 1em);
+    display: inline-block;
     text-align: right;
   }
 }

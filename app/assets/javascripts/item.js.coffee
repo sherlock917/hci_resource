@@ -34,6 +34,9 @@ $(document).on 'ready', () ->
   $('#search-cancel').on 'click', () ->
     hideSearch()
 
+  $(window).on 'scroll', () ->
+    scrollHandler()
+
   uploadable = (file) ->
     type = file.name.split('.').pop()
     size = file.size

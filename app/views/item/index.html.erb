@@ -2,12 +2,12 @@
   <% @items.each_with_index do |item, index| %>
   <section class="item" id="item-<%= index %>">
     <div class="item-main">
-      <span class="item-column"><%= item.name %>
+      <span class="item-name"><%= item.name %>
         <a href="#item-<%= index %>">
           <%= image_tag "link.png", class: "link-icon" %>
         </a>
       </span>
-      <span class="item-column item-column-download">
+      <span class="item-download">
         <%= link_to '下载', item.url , target: :_blank, class: :'btn btn-download', item_count: item.download_count, item_id: item.id %>
       </span>
     </div>
