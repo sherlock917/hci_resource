@@ -291,3 +291,15 @@
   float: right;
   margin-left: 0.5em;
 }
+
+#totop {
+  width: 3em;
+  height: 3em;
+  position: fixed;
+  right: 5em;
+  bottom: 5em;
+  border-radius: 0.5em;
+  font-weight: bolder;
+  opacity: 0;
+  transition: opacity 0.5s;
+}

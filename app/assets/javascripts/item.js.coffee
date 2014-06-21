@@ -37,6 +37,9 @@ $(document).on 'ready', () ->
   $(window).on 'scroll', () ->
     scrollHandler()
 
+  $('#totop').on 'click', () ->
+    scrollToTop()
+
   uploadable = (file) ->
     type = file.name.split('.').pop()
     size = file.size
@@ -154,3 +157,12 @@ $(document).on 'ready', () ->
     if $('#search-input').val() != ''
       location.href = '/item/search/' + $('#search-input').val()
     false
+
+  scrollHandler = () ->
+    if $(window).scrollTop() > $(window).height() / 2
+      $('#totop').css('opacity', 1)
+    else
+      $('#totop').css('opacity', 0)
+
+  scrollToTop = () ->
+    $('body').animate({scrollTop:0}, 500)
