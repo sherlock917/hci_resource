@@ -189,6 +189,11 @@ $(document).on 'ready', () ->
     $('.item').css('box-shadow', shadowX + 'em ' + shadowY + 'em 0.7em #aaa')
     $('.footer').css('box-shadow', shadowX + 'em ' + shadowY + 'em 0.7em #aaa')
     $('.search-box').css('box-shadow', shadowX + 'em ' + shadowY + 'em 0.7em #aaa')
+    $(window).unbind('mousemove')
+    setTimeout(() ->
+      $(window).on 'mousemove', (e) ->
+        mousemoveHandler(e) 
+    30)
 
 
 
