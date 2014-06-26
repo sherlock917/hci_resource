@@ -173,8 +173,8 @@ $(document).on 'ready', () ->
   mousemoveHandler = (e) ->
     windowCenterX = $(window).width() / 2
     windowCenterY = $(window).height() / 2
-    mousePosX = e.pageX
-    mousePosY = e.pageY
+    mousePosX = e.clientX
+    mousePosY = e.clientY
     shadowX = 0.001 * (windowCenterX - mousePosX)
     shadowY = 0.001 * (windowCenterY - mousePosY)
     if shadowX > 0
