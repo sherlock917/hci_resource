@@ -34,11 +34,14 @@ $(document).on 'ready', () ->
   $('#search-cancel').on 'click', () ->
     hideSearch()
 
+  $('#totop').on 'click', () ->
+    scrollToTop()
+
   $(window).on 'scroll', () ->
     scrollHandler()
 
-  $('#totop').on 'click', () ->
-    scrollToTop()
+  $(window).on 'mousemove', (e) ->
+    mousemoveHandler(e)
 
   uploadable = (file) ->
     type = file.name.split('.').pop()
@@ -166,3 +169,26 @@ $(document).on 'ready', () ->
 
   scrollToTop = () ->
     $('body').animate({scrollTop:0}, 500)
+
+  mousemoveHandler = (e) ->
+    windowCenterX = $(window).width() / 2
+    windowCenterY = $(window).height() / 2
+    mousePosX = e.pageX
+    mousePosY = e.pageY
+    shadowX = 0.001 * (windowCenterX - mousePosX)
+    shadowY = 0.001 * (windowCenterY - mousePosY)
+    if shadowX > 0
+      shadowX = 0.2 if shadowX > 0.2
+    else
+      shadowX = -0.2 if shadowX < -0.2
+    if shadowY > 0
+      shadowY = 0.2 if shadowY > 0.2
+    else
+      shadowY = -0.2 if shadowY < -0.2
+    $('.nav').css('box-shadow', shadowX + 'em ' + shadowY + 'em 0.7em #aaa')
+    $('.item').css('box-shadow', shadowX + 'em ' + shadowY + 'em 0.7em #aaa')
+    $('.footer').css('box-shadow', shadowX + 'em ' + shadowY + 'em 0.7em #aaa')
+    $('.search-box').css('box-shadow', shadowX + 'em ' + shadowY + 'em 0.7em #aaa')
+
+
+
