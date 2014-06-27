@@ -61,7 +61,8 @@ $(document).on 'ready', () ->
     type == 'jpg' ||
     type == 'png' || 
     type == 'gif' ||
-    type == 'ico')
+    type == 'ico' ||
+    type == 'mp4')
 
   showUpload = () ->
     if $('#file-submit').attr('disabled') == 'disabled'
