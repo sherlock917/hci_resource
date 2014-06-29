@@ -12,9 +12,9 @@ $(document).on 'ready', () ->
         upload file
       else
         if file.size > 104857600
-          alert '不支持上传大于100M的文件！'
+          alert '不支持上传大于150M的文件！'
         else
-          alert '仅支持上传rar、zip、pdf、doc、xls、ppt以及图片！'
+          alert '仅支持上传rar、zip、pdf、doc、xls、ppt、mp4以及图片！'
 
   $('.btn-download').on 'click', (e) ->
     updateItem(e)
