@@ -46,7 +46,7 @@ $(document).on 'ready', () ->
   uploadable = (file) ->
     type = file.name.split('.').pop()
     size = file.size
-    (size < 104857600) &&
+    (size < 157286400) &&
     (type == 'rar' || 
     type == 'zip' ||
     type == '7z' ||
